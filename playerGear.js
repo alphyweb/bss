@@ -12,22 +12,32 @@ window.playerGear={
 
         basicSprinkler:{
 
-            count:1,
-            diameter:10,
-            power:0.2,
-            rate:4,
+            count:10,
+            diameter:50,
+            power:20,
+            rate:0.5,
             mesh:function(x,y,z,box,cylinder){
 
-                cylinder(x,y,z,0.125,1.25,10,0.3,0.3,0.3,1,90,0,0)
-                cylinder(x,y+1.25*0.5,z,0.16,0.15,10,0.3,0.3,0.3,1,90,0,0)
+                cylinder(x,y+0.25,z,0.15,2.5,10,0.9,0.9,0.5,1,90,0,0)
+                cylinder(x,y+1.5,z,0.2,0.15,10,1,1,0.5,1,90,0,0)
+                box(x,y+0.7,z,0.9,0.9,0.35,false,[0.2,10,10],false,false)
+                cylinder(x+0.4,y+1.1,z,0.25,0.35,10,0.2,10,10,1,0,0,0,0.25,false)
+                cylinder(x-0.4,y+1.1,z,0.25,0.35,10,0.2,10,10,1,0,0,0,0.25,false)
+                cylinder(x,y+0.7,z,0.3,0.375,10,0.5,0.5,0.5,1,0,0,0,0.25,false)
+                cylinder(x,y+0.7,z,0.1,0.5,10,0.2,10,10,1,0,0,0,0.1,false)
             },
             shopMesh:function(x,y,z,box,cylinder){
 
-                cylinder(x,y,z,0.125,1.25,10,0.3,0.3,0.3,90,0,0)
-                cylinder(x,y+1.25*0.5,z,0.16,0.15,10,0.3,0.3,0.3,90,0,0)
+                cylinder(x,y+0.25,z,0.15,2.5,10,0.9,0.9,0.5,90,0,0)
+                cylinder(x,y+1.5,z,0.2,0.15,10,1,1,0.5,90,0,0)
+                box(x,y+0.7,z,0.9,0.9,0.35,false,[0.2,10,10])
+                cylinder(x+0.4,y+1.1,z,0.25,0.35,10,0.2,10,10,0,0,0,0.25,false)
+                cylinder(x-0.4,y+1.1,z,0.25,0.35,10,0.2,10,10,0,0,0,0.25,false)
+                cylinder(x,y+0.7,z,0.3,0.375,10,0.5,0.5,0.5,0,0,0,0.25,false)
+                cylinder(x,y+0.7,z,0.1,0.5,10,0.2,10,10,0,0,0,0.1,false)
             },
-            desc:'When planted in the ground, causes nearby flowers to regrow faster!<br><br>Count: 1<br>Diameter: 10<br>Power: 20<br>Rate: 4s<br><br>Press "R" to place a sprinkler.',
-            cost:['1111111 honey'],
+            desc:'The ultimate sprinkler. Nobody knows how it works or where it came from.<br><br>Count: 1<br>Diameter: 15<br>Power: 50<br>Rate: 1s<br><br>Press "R" to place a sprinkler.',
+            cost:['1 honey'],
         },
 
         silverSoakers:{
@@ -479,11 +489,11 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=18
-                stats.gliderFall=-5
+                stats.gliderSpeed=30
+                stats.gliderFall=-1
             },
             desc:'Floats much faster than the Parachute, allowing you to fly through the sky!<br><br>Press jump while in the air to open. ',
-            cost:['5000000 honey'],
+            cost:['1 honey'],
         },
         
     },
@@ -523,15 +533,62 @@ window.playerGear={
             },
             
             applyStats:function(stats,player){
-                
-                stats.bluePollen*=1.15
-                stats.whitePollen*=1.15
-                stats.redPollen*=1.15
-                stats.defense+=0.1
-
+                stats.capacityMultiplier*=2
+                stats.whiteFieldCapacity*=1.75
+                stats.goo*=1.75
+                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.25)
+                stats.redBeeAbilityRate*=1.2
+                stats.blueBeeAbilityRate*=1.2
+                stats.whiteBeeAbilityRate*=1.2
+                stats.bluePollen*=1.35
+                stats.whitePollen*=1.35
+                stats.redPollen*=1.35
+                stats.whitePollen*=1.5
+                stats.honeyFromTokens*=1.5
+                stats.convertRate*=1.75
+                stats.defense+=0.3
+                player.addEffect('gummyMorphPassive')
+                player.addEffect('coinScatterPassive')
+                stats.movementCollection+=15
+                stats.walkSpeed*=1.2
+                stats.bluePollen*=1.2
+                stats.whitePollen*=1.2
+                stats.redPollen*=1.2
+                stats.jumpPower*=3
+                stats.redBeeAbilityRate*=5
+                stats.blueBeeAbilityRate*=5
+                stats.whiteBeeAbilityRate*=5
+                stats.defense+=100
+                stats.capacityMultiplier*=3
+                stats.blueFieldCapacity*=1.75
+                stats.bluePollen*=1.5
+                stats.bluePollen*=1.35
+                stats.whitePollen*=1.35
+                stats.redPollen*=1.35
+                stats.convertRate*=2
+                stats.convertRateAtHive*=2
+                stats.bubblePollen*=2
+                stats.redBeeAbilityRate*=1.2
+                stats.blueBeeAbilityRate*=1.2
+                stats.whiteBeeAbilityRate*=1.2
+                stats.defense+=0.35
+                player.addEffect('diamondDrainPassive')
+                player.addEffect('bubbleBombsPassive')
+                stats.capacityMultiplier*=2
+                stats.redFieldCapacity*=1.75
+                stats.redPollen*=1.75
+                stats.beeAttack*=1.25
+                stats.instantFlameConversion=window.applyPercentage(stats.instantFlameConversion,0.5)
+                stats.flamePollen*=2
+                stats.redBeeAbilityRate*=1.2
+                stats.blueBeeAbilityRate*=1.2
+                stats.whiteBeeAbilityRate*=1.2
+                stats.defense+=0.35
+                player.addEffect('xFlamePassive')
+                player.addEffect('ignitePassive')
             },
             desc:'A hard hat that grants bonus pollen and helps prevent head injuries.<br><br>x1.15 pollen<br>+10% defense',
-            cost:['30000 honey','1 pineapple'],
+            cost:['1 honey'],
         },
 
         propellerHat:{
