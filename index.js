@@ -878,6 +878,7 @@ function BeeSwarmSimulator(DATA){
             document.getElementById('resetChar').onclick=function(){
                 
                 player.health=-100
+                player.honey = 0
             }
 
             document.getElementById('autoJellySettingsUntil').onclick=function(){
@@ -34760,3 +34761,4 @@ function BeeSwarmSimulator(DATA){
     
 
 }
+
