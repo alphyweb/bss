@@ -533,57 +533,59 @@ window.playerGear={
             },
             
             applyStats:function(stats,player){
-                stats.capacityMultiplier*=2
-                stats.whiteFieldCapacity*=1.75
-                stats.goo*=1.75
+                stats.capacityMultiplier*=200
+                stats.whiteFieldCapacity*=200
+                stats.redFieldCapacity*=200
+                stats.blueFieldCapacity*=200
+                stats.goo*=95.75
                 stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.25)
-                stats.redBeeAbilityRate*=1.2
-                stats.blueBeeAbilityRate*=1.2
-                stats.whiteBeeAbilityRate*=1.2
-                stats.bluePollen*=1.35
-                stats.whitePollen*=1.35
-                stats.redPollen*=1.35
-                stats.whitePollen*=1.5
-                stats.honeyFromTokens*=1.5
-                stats.convertRate*=1.75
-                stats.defense+=0.3
+                stats.redBeeAbilityRate*=67
+                stats.blueBeeAbilityRate*=67
+                stats.whiteBeeAbilityRate*=67
+                stats.bluePollen*=50
+                stats.whitePollen*=50
+                stats.redPollen*=50
+                stats.whitePollen*=50
+                stats.honeyFromTokens*=50
+                stats.convertRate*=9000
+                stats.defense+=50
                 player.addEffect('gummyMorphPassive')
                 player.addEffect('coinScatterPassive')
-                stats.movementCollection+=15
-                stats.walkSpeed*=1.2
-                stats.bluePollen*=1.2
-                stats.whitePollen*=1.2
-                stats.redPollen*=1.2
+                stats.movementCollection+=100
+                stats.walkSpeed*=3
+                stats.bluePollen*=2
+                stats.whitePollen*=2
+                stats.redPollen*=2
                 stats.jumpPower*=3
-                stats.redBeeAbilityRate*=5
-                stats.blueBeeAbilityRate*=5
-                stats.whiteBeeAbilityRate*=5
+                stats.redBeeAbilityRate*=50
+                stats.blueBeeAbilityRate*=50
+                stats.whiteBeeAbilityRate*=50
                 stats.defense+=100
-                stats.capacityMultiplier*=3
-                stats.blueFieldCapacity*=1.75
+                stats.capacityMultiplier*=13
+                stats.blueFieldCapacity*=50
                 stats.bluePollen*=1.5
                 stats.bluePollen*=1.35
                 stats.whitePollen*=1.35
                 stats.redPollen*=1.35
                 stats.convertRate*=2
-                stats.convertRateAtHive*=2
-                stats.bubblePollen*=2
+                stats.convertRateAtHive*=5050
+                stats.bubblePollen*=5050
                 stats.redBeeAbilityRate*=1.2
                 stats.blueBeeAbilityRate*=1.2
                 stats.whiteBeeAbilityRate*=1.2
-                stats.defense+=0.35
+                stats.defense+=5050
                 player.addEffect('diamondDrainPassive')
                 player.addEffect('bubbleBombsPassive')
                 stats.capacityMultiplier*=2
-                stats.redFieldCapacity*=1.75
-                stats.redPollen*=1.75
-                stats.beeAttack*=1.25
+                stats.redFieldCapacity*=5050
+                stats.redPollen*=50
+                stats.beeAttack*=505050
                 stats.instantFlameConversion=window.applyPercentage(stats.instantFlameConversion,0.5)
-                stats.flamePollen*=2
-                stats.redBeeAbilityRate*=1.2
-                stats.blueBeeAbilityRate*=1.2
-                stats.whiteBeeAbilityRate*=1.2
-                stats.defense+=0.35
+                stats.flamePollen*=5050
+                stats.redBeeAbilityRate*=50
+                stats.blueBeeAbilityRate*=50
+                stats.whiteBeeAbilityRate*=50
+                stats.defense+=50
                 player.addEffect('xFlamePassive')
                 player.addEffect('ignitePassive')
             },
