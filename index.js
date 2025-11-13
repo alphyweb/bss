@@ -511,7 +511,7 @@ function BeeSwarmSimulator(DATA){
 
     let blenderRecipes=[
         
-        {item:'gumdrops',req:[['pineapple',1],['strawberry',1],['blueberry',1],['sunflowerSeed',1]]},
+        {item:'giftedMythicEgg',req:[['royalJelly',1]]},
         {item:'moonCharm',req:[['royalJelly',1],['pineapple',2],['gumdrops',2]]},
         {item:'redExtract',req:[['strawberry',35],['royalJelly',5]]},
         {item:'blueExtract',req:[['blueberry',35],['royalJelly',5]]},
@@ -582,10 +582,10 @@ function BeeSwarmSimulator(DATA){
         {item:'goldEgg',rewardType:'winds',rewardAmount:7.5},
         {item:'diamondEgg',rewardType:'winds',rewardAmount:10},
         {item:'mythicEgg',rewardType:'winds',rewardAmount:12},
-        {item:'giftedSilverEgg',rewardType:'winds',rewardAmount:11},
-        {item:'giftedGoldEgg',rewardType:'winds',rewardAmount:12},
-        {item:'giftedDiamondEgg',rewardType:'winds',rewardAmount:13},
-        {item:'giftedMythicEgg',rewardType:'winds',rewardAmount:14},
+        {item:'giftedSilverEgg',rewardType:'winds',rewardAmount:55},
+        {item:'giftedGoldEgg',rewardType:'winds',rewardAmount:55},
+        {item:'giftedDiamondEgg',rewardType:'winds',rewardAmount:55},
+        {item:'giftedMythicEgg',rewardType:'giftedMythicEgg',rewardAmount:55},
         {item:'starEgg',rewardType:'winds',rewardAmount:14},
 
     ]
@@ -24608,7 +24608,7 @@ function BeeSwarmSimulator(DATA){
                 },{
                     name:'Mythic Egg',
                     items:[['mythicEgg',1]],
-                    cost:[500,100],
+                    cost:[0],
                     svgs:[['mythicEgg',0,11,0.75,0.75]],
                     desc:'<br>Always hatches into a random Mythic Bee!',
                     topDesc:15,
@@ -24688,8 +24688,8 @@ function BeeSwarmSimulator(DATA){
                     topDesc:30,fntSize:10
                 },{
                     name:'Merry Mythic Bundle',
-                    items:[['giftedMythicEgg',1],['purplePotion',10],['festiveBean',3],['mythicEgg',3],['turpentine',1]],
-                    cost:[25000,250],
+                    items:[['giftedMythicEgg',11111111],['purplePotion',10],['festiveBean',3],['mythicEgg',3],['turpentine',1]],
+                    cost:[0,0],
                     svgs:[['giftedMythicEgg',8,12,0.8,0.8]],
                     topDesc:30,fntSize:9
                 }
@@ -34758,4 +34758,5 @@ function BeeSwarmSimulator(DATA){
         window.objects=objects
     }
     
+
 }
