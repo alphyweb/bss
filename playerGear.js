@@ -533,6 +533,33 @@ window.playerGear={
             },
             
             applyStats:function(stats,player){
+                stats.convertRate*=1.4
+                stats.capacity+=300000
+                stats.bluePollen*=1.35
+                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.2)
+                stats.blueBombPollen*=1.5
+                stats.blueBeeAttack+=3
+                stats.whiteBeeAttack+=2
+                stats.criticalPower+=1
+                player.addEffect('hastePulserPassive')
+                stats.convertRate*=1.4
+                stats.redPollen*=1.35
+                stats.capacity+=300000
+                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.2)
+                stats.redBombPollen*=1.5
+                stats.redBeeAttack+=3
+                stats.whiteBeeAttack+=2
+                stats.criticalChance+=9000
+                player.addEffect('focusPulserPassive')
+                stats.capacity+=301230000
+                stats.capacityMultiplier*=211
+                stats.lootLuck*=20000
+                stats.convertRate*=900
+                stats.honeyFromTokens*=90000
+                stats.whiteBeeAttack+=212123
+                stats.whiteBombPollen*=1.5
+                stats.beeEnergy*=12312313111.25
+                player.addEffect('petalStormPassive')
                 stats.capacityMultiplier*=200
                 stats.whiteFieldCapacity*=200
                 stats.redFieldCapacity*=200
@@ -575,7 +602,7 @@ window.playerGear={
                 stats.whiteBeeAbilityRate*=1.2
                 stats.defense+=5050
                 player.addEffect('diamondDrainPassive')
-                player.addEffect('bubbleBombsPassive')
+                player.addEffect('diamondDrainPassive')
                 stats.capacityMultiplier*=2
                 stats.redFieldCapacity*=5050
                 stats.redPollen*=50
