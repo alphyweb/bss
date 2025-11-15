@@ -553,7 +553,7 @@ window.playerGear={
                 player.addEffect('focusPulserPassive')
                 stats.capacity+=301230000
                 stats.capacityMultiplier*=211
-                stats.lootLuck*=20000
+                stats.lootLuck*=200
                 stats.convertRate*=900
                 stats.honeyFromTokens*=90000
                 stats.whiteBeeAttack+=212123
