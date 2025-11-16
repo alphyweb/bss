@@ -533,38 +533,38 @@ window.playerGear={
             },
             
             applyStats:function(stats,player){
-                stats.convertRate*=1.4
+                stats.convertRate*=67
                 stats.capacity+=300000
-                stats.bluePollen*=1.35
+                stats.bluePollen*=67
                 stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.2)
-                stats.blueBombPollen*=1.5
-                stats.blueBeeAttack+=3
-                stats.whiteBeeAttack+=2
-                stats.criticalPower+=1
+                stats.blueBombPollen*=67
+                stats.blueBeeAttack+=67
+                stats.whiteBeeAttack+=67
+                stats.criticalPower+=2
                 player.addEffect('hastePulserPassive')
-                stats.convertRate*=1.4
-                stats.redPollen*=1.35
+                stats.convertRate*=67
+                stats.redPollen*=67
                 stats.capacity+=300000
                 stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.2)
-                stats.redBombPollen*=1.5
-                stats.redBeeAttack+=3
-                stats.whiteBeeAttack+=2
-                stats.criticalChance+=9000
+                stats.redBombPollen*=67
+                stats.redBeeAttack+=67
+                stats.whiteBeeAttack+=67
+                stats.criticalChance+=19000
                 player.addEffect('focusPulserPassive')
                 stats.capacity+=301230000
-                stats.capacityMultiplier*=211
-                stats.lootLuck*=200
+                stats.capacityMultiplier*=67
+                stats.lootLuck*=20
                 stats.convertRate*=900
-                stats.honeyFromTokens*=90000
-                stats.whiteBeeAttack+=212123
-                stats.whiteBombPollen*=1.5
+                stats.honeyFromTokens*=1000
+                stats.whiteBeeAttack+=67
+                stats.whiteBombPollen*=67
                 stats.beeEnergy*=12312313111.25
                 player.addEffect('petalStormPassive')
                 stats.capacityMultiplier*=200
                 stats.whiteFieldCapacity*=200
                 stats.redFieldCapacity*=200
                 stats.blueFieldCapacity*=200
-                stats.goo*=95.75
+                stats.goo*=67
                 stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.25)
                 stats.redBeeAbilityRate*=67
                 stats.blueBeeAbilityRate*=67
@@ -573,6 +573,7 @@ window.playerGear={
                 stats.whitePollen*=50
                 stats.redPollen*=50
                 stats.whitePollen*=50
+                stats.beeSpeed*=10
                 stats.honeyFromTokens*=50
                 stats.convertRate*=9000
                 stats.defense+=50
@@ -580,10 +581,10 @@ window.playerGear={
                 player.addEffect('coinScatterPassive')
                 stats.movementCollection+=100
                 stats.walkSpeed*=3
-                stats.bluePollen*=2
-                stats.whitePollen*=2
-                stats.redPollen*=2
-                stats.jumpPower*=3
+                stats.bluePollen*=67
+                stats.whitePollen*=67
+                stats.redPollen*=67
+                stats.jumpPower*=2
                 stats.redBeeAbilityRate*=50
                 stats.blueBeeAbilityRate*=50
                 stats.whiteBeeAbilityRate*=50
@@ -597,13 +598,13 @@ window.playerGear={
                 stats.convertRate*=2
                 stats.convertRateAtHive*=5050
                 stats.bubblePollen*=5050
-                stats.redBeeAbilityRate*=1.2
-                stats.blueBeeAbilityRate*=1.2
-                stats.whiteBeeAbilityRate*=1.2
+                stats.redBeeAbilityRate*=67
+                stats.blueBeeAbilityRate*=67
+                stats.whiteBeeAbilityRate*=67
                 stats.defense+=5050
                 player.addEffect('diamondDrainPassive')
                 player.addEffect('diamondDrainPassive')
-                stats.capacityMultiplier*=2
+                stats.capacityMultiplier*=21
                 stats.redFieldCapacity*=5050
                 stats.redPollen*=50
                 stats.beeAttack*=505050
