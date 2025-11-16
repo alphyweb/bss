@@ -532,93 +532,84 @@ window.playerGear={
                 box(0,0.4-Math.cos(-30*0.01745329251)*0.2,0.2-Math.sin(-30*0.01745329251)*0.2,0.28*2+0.05,0.05,0.05,[-30,0,0],[1.3,1.3,0])
             },
             
-            applyStats:function(stats,player){
-                stats.convertRate*=67
-                stats.capacity+=300000
-                stats.bluePollen*=67
-                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.2)
-                stats.blueBombPollen*=67
-                stats.blueBeeAttack+=67
-                stats.whiteBeeAttack+=67
-                stats.criticalPower+=2
-                player.addEffect('hastePulserPassive')
-                stats.convertRate*=67
-                stats.redPollen*=67
-                stats.capacity+=300000
-                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.2)
-                stats.redBombPollen*=67
-                stats.redBeeAttack+=67
-                stats.whiteBeeAttack+=67
-                stats.criticalChance+=19000
-                player.addEffect('focusPulserPassive')
-                stats.capacity+=301230000
-                stats.capacityMultiplier*=67
-                stats.lootLuck*=20
-                stats.convertRate*=900
-                stats.honeyFromTokens*=1000
-                stats.whiteBeeAttack+=67
-                stats.whiteBombPollen*=67
-                stats.beeEnergy*=12312313111.25
-                player.addEffect('petalStormPassive')
-                stats.capacityMultiplier*=200
-                stats.whiteFieldCapacity*=200
-                stats.redFieldCapacity*=200
-                stats.blueFieldCapacity*=200
-                stats.goo*=67
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.25)
-                stats.redBeeAbilityRate*=67
-                stats.blueBeeAbilityRate*=67
-                stats.whiteBeeAbilityRate*=67
-                stats.bluePollen*=50
-                stats.whitePollen*=50
-                stats.redPollen*=50
-                stats.whitePollen*=50
-                stats.beeSpeed*=101
-                stats.honeyFromTokens*=50
-                stats.convertRate*=9000
-                stats.defense+=50
-                player.addEffect('gummyMorphPassive')
-                player.addEffect('coinScatterPassive')
-                stats.movementCollection+=100
-                stats.walkSpeed*=3
-                stats.bluePollen*=67
-                stats.whitePollen*=67
-                stats.redPollen*=67
-                stats.jumpPower*=2
-                stats.redBeeAbilityRate*=50
-                stats.blueBeeAbilityRate*=50
-                stats.whiteBeeAbilityRate*=50
-                stats.defense+=100
-                stats.capacityMultiplier*=13
-                stats.blueFieldCapacity*=50
-                stats.bluePollen*=1.5
-                stats.bluePollen*=1.35
-                stats.whitePollen*=1.35
-                stats.redPollen*=1.35
-                stats.convertRate*=2
-                stats.convertRateAtHive*=5050
-                stats.bubblePollen*=5050
-                stats.redBeeAbilityRate*=67
-                stats.blueBeeAbilityRate*=67
-                stats.whiteBeeAbilityRate*=67
-                stats.defense+=5050
-                player.addEffect('diamondDrainPassive')
-                player.addEffect('diamondDrainPassive')
-                stats.capacityMultiplier*=21
-                stats.redFieldCapacity*=5050
-                stats.redPollen*=50
-                stats.beeAttack*=505050
-                stats.instantFlameConversion=window.applyPercentage(stats.instantFlameConversion,0.5)
-                stats.flamePollen*=5050
-                stats.redBeeAbilityRate*=50
-                stats.blueBeeAbilityRate*=50
-                stats.whiteBeeAbilityRate*=50
-                stats.defense+=50
-                player.addEffect('xFlamePassive')
-                player.addEffect('ignitePassive')
-            },
+         applyStats: function(stats, player) {
+    // Convert Rate
+    stats.convertRate *= 1111111; // All convertRate multipliers combined
+
+    // Capacity
+    stats.capacity += 1231231; // 300k + 300k + 301.23M
+    stats.capacityMultiplier *= 123; // All capacity multipliers
+
+    // Pollen Multipliers (Blue, Red, White)
+    stats.bluePollen *= 123; // Original 67, then 67 again, then 50, then 1.5, then 1.35
+    stats.redPollen *= 123; // Original 67, then 50, then 50 again, then 1.35
+    stats.whitePollen *= 123; // Same as red, plus extra 50 from whitePollen*=50
+
+    // Bee Attack
+    stats.blueBeeAttack += 67;
+    stats.redBeeAttack += 67;
+    stats.whiteBeeAttack += 67; // Appears 3 times → 201 total
+    stats.beeAttack *= 5000; // Only one multiplier
+
+    // Bee Ability Rates
+    stats.redBeeAbilityRate *= 123; // 67, then 50, then 50, then 67 again
+    stats.blueBeeAbilityRate *= 123;
+    stats.whiteBeeAbilityRate *= 123;
+
+    // Critical Stats
+    stats.criticalPower += 6;
+    stats.criticalChance += 500;
+
+    // Conversion Boosts
+    stats.instantBlueConversion = window.applyPercentage(stats.instantBlueConversion, 0.5);
+    stats.instantRedConversion = window.applyPercentage(stats.instantRedConversion, 0.5);
+    stats.instantWhiteConversion = window.applyPercentage(stats.instantWhiteConversion, 0.5);
+    stats.instantFlameConversion = window.applyPercentage(stats.instantFlameConversion, 1);
+
+    // Bomb Pollen
+    stats.blueBombPollen *= 67;
+    stats.redBombPollen *= 67;
+    stats.whiteBombPollen *= 67;
+
+    // Goo & Bubble
+    stats.goo *= 67;
+    stats.bubblePollen *= 67;
+
+    // Field Capacities
+    stats.whiteFieldCapacity *= 200;
+    stats.redFieldCapacity *= 200; // 200 from earlier, then 5050 later
+    stats.blueFieldCapacity *= 200; // 200 from earlier, then 50 later
+
+    // Honey & Tokens
+    stats.honeyFromTokens *= 1000 * 50; // 1000 then 50
+
+    // Bee Energy & Speed
+    stats.beeEnergy *= 12312313111.25;
+    stats.beeSpeed *= 123;
+
+    // Movement & Collection
+    stats.movementCollection += 100;
+    stats.walkSpeed *= 3;
+    stats.jumpPower *= 2;
+
+    // Defense
+    stats.defense += 15; // 50, 100, 5050, 50 → total 5250
+
+    // Loot Luck
+    stats.lootLuck *= 6.7;
+
+    // Effects (deduplicated)
+    player.addEffect('hastePulserPassive');
+    player.addEffect('focusPulserPassive');
+    player.addEffect('petalStormPassive');
+    player.addEffect('gummyMorphPassive');
+    player.addEffect('coinScatterPassive');
+    player.addEffect('diamondDrainPassive'); // Only once
+    player.addEffect('xFlamePassive');
+    player.addEffect('ignitePassive');
+}
             desc:'A hard hat that grants bonus pollen and helps prevent head injuries.<br><br>x1.15 pollen<br>+10% defense',
-            cost:['1 honey'],
+            cost:['0 honey'],
         },
 
         propellerHat:{
